@@ -1,5 +1,4 @@
 function searchName(param1, param2, callback){
-    console.log(param2)
     const name = [
         "Abigail", "Alexandra", "Alison",
         "Amanda", "Angela", "Bella",
