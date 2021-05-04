@@ -8,12 +8,12 @@ function searchName(param1, param2, callback){
     ]
     const nameLower = name.map(name => name.toLowerCase())
     const found = nameLower.filter(element => element.includes(param1))
-    console.log(found.slice(0, param2))
+    callback(found, param2)
 }
 
-function cb(char1){
-    const result1 = char1
-    return result1
+function cb(char, limit){
+    const result = char.slice(0, limit)
+    console.log(result)
 }
 
 searchName("an", 3, cb)
