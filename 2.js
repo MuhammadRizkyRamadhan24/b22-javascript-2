@@ -1,4 +1,5 @@
 function searchName(param1, param2, callback){
+    console.log(param2)
     const name = [
         "Abigail", "Alexandra", "Alison",
         "Amanda", "Angela", "Bella",
@@ -8,15 +9,12 @@ function searchName(param1, param2, callback){
     ]
     const nameLower = name.map(name => name.toLowerCase())
     const found = nameLower.filter(element => element.includes(callback(param1)))
-    found.length = Math.min(found.length, callback(param2))
-    console.log(found)
+    console.log(found.slice(0, param2))
 }
 
-function cb(char1, char2){
+function cb(char1){
     const result1 = char1
-    const result2 = char2
     return result1
-    return result2
 }
 
 searchName("an", 3, cb)
