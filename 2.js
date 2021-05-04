@@ -7,7 +7,7 @@ function searchName(param1, param2, callback){
         "Ella", "Faith", "Olivia", "Penelope"
     ]
     const nameLower = name.map(name => name.toLowerCase())
-    const found = nameLower.filter(element => element.includes(callback(param1)))
+    const found = nameLower.filter(element => element.includes(param1))
     console.log(found.slice(0, param2))
 }
 
